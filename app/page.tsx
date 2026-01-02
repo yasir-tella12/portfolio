@@ -78,7 +78,7 @@ export default function HomePage() {
 
   <div className="flex w-full gap-6 mt-auto pt-6">
 
-  {/* PROJECTS */}
+  {/* PROJECTS - Navigate to /projects page */}
   <Link
     href="/projects"
     className="flex-1 px-10 py-4 bg-zinc-800/60 border border-blue-400/20 rounded-full font-bold hover:bg-zinc-700 hover:border-blue-400/50 transition-all flex items-center justify-center gap-3 text-lg group shadow-lg"
@@ -87,14 +87,18 @@ export default function HomePage() {
     <span className="text-blue-400 group-hover:translate-x-1 transition-transform">»»</span>
   </Link>
 
-  {/* CONTACT */}
-<Link
-  href="/#contact"
-  className="flex-1 px-10 py-4 bg-zinc-800/60 border border-blue-400/20 rounded-full font-bold hover:bg-zinc-700 hover:border-blue-400/50 transition-all flex items-center justify-center gap-3 text-lg group shadow-lg"
->
-  <span className="text-zinc-200">Contact</span>
-  <span className="text-blue-400 group-hover:translate-x-1 transition-transform">»»</span>
-</Link>
+  {/* CONTACT ME - Navigate to /contact page */}
+  <Link
+    href="/contact"
+    className="flex-1 px-10 py-5 bg-zinc-900/60 border border-blue-500/10 rounded-full font-bold hover:bg-zinc-800 hover:border-blue-500/40 transition-all duration-300 flex items-center justify-center gap-4 text-lg group shadow-xl backdrop-blur-sm"
+  >
+    <span className="text-zinc-200 tracking-wide">Contact</span>
+    
+    {/* The arrows now have a slightly smoother movement to match the premium feel */}
+    <span className="text-blue-500 group-hover:translate-x-2 transition-transform duration-300 ease-out">
+      »»
+    </span>
+  </Link>
 
 </div>
 </div>
@@ -117,14 +121,14 @@ export default function HomePage() {
             </div>
 
             <a
-  href="#skills"
-  className="group flex items-center gap-3 px-8 py-3 bg-zinc-800/40 border border-blue-500/30 rounded-full hover:bg-zinc-800 transition-all"
->
-  <span className="text-blue-100 font-medium">Explore Skills</span>
-  <div className="flex flex-col -space-y-1 text-blue-500/50 group-hover:text-blue-400">
-    <span>︾</span>
-  </div>
-</a>
+              href="#skills"
+              className="group flex items-center gap-3 px-8 py-3 bg-zinc-800/40 border border-blue-500/30 rounded-full hover:bg-zinc-800 transition-all"
+            >
+              <span className="text-blue-400 font-medium">Explore Skills</span>
+              <div className="flex flex-col -space-y-1 text-blue-500/50 group-hover:text-blue-400">
+                <span>︾</span>
+              </div>
+            </a>
 
           </div>
 
@@ -156,9 +160,9 @@ export default function HomePage() {
         </section>
 
         {/* ================= SKILLS GRID ================= */}
-<section
-  id="skills"
-  className="scroll-mt-32 grid md:grid-cols-2 gap-10 py-20">
+        <section
+          id="skills"
+          className="scroll-mt-32 grid md:grid-cols-2 gap-10 py-20">
 
           <SkillCard 
             title="Frontend Development" 
@@ -196,22 +200,24 @@ export default function HomePage() {
             ]} 
           />
         </section>
-     {/* ================= CTA ================= */}
-<section className="text-center py-20 space-y-8">
-  <h2 className="text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
-    Have a project in mind <br />
-    <span className="text-blue-500">or want to work together?</span>
-  </h2>
 
-  <a
-    href="#contact"
-    className="inline-flex px-12 py-4 bg-zinc-800/50 border border-zinc-700 rounded-full text-lg items-center gap-4 mx-auto hover:bg-zinc-800 transition shadow-xl group"
-  >
-    <span className="text-zinc-400">Get In</span>
-    <span className="font-bold text-white">Touch</span>
-    <span className="text-blue-400 group-hover:translate-x-1 transition-transform">»»</span>
-  </a>
-</section>
+        {/* ================= CTA ================= */}
+        <section className="text-center py-20 space-y-8">
+          <h2 className="text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
+            Have a project in mind <br />
+            <span className="text-blue-500">or want to work together?</span>
+          </h2>
+
+          {/* GET IN TOUCH - Navigate to /contact page */}
+          <Link
+            href="/contact"
+            className="inline-flex px-12 py-4 bg-zinc-800/50 border border-zinc-700 rounded-full text-lg items-center gap-4 mx-auto hover:bg-zinc-800 transition shadow-xl group"
+          >
+            <span className="text-zinc-400">Get In</span>
+            <span className="font-bold text-white">Touch</span>
+            <span className="text-blue-400 group-hover:translate-x-1 transition-transform">»»</span>
+          </Link>
+        </section>
 
       </div>
     </main>
